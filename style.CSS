@@ -1,0 +1,76 @@
+/* Base Styling */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: #fdf6f0;
+  color: #3b2f2f;
+}
+
+/* Layout Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: #5c4033;
+  color: #fff9f4;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #f0e7df;
+}
+
+/* Section Headings */
+section {
+  margin-top: 2.5rem;
+}
+
+h2 {
+  color: #5c4033;
+  font-family: 'Playfair Display', serif;
+  border-bottom: 2px solid #d6c3b2;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+section div {
+  margin-top: 1rem;
+}
+
+/* Lists and Skills */
+ul {
+  padding-left: 1.5rem;
+}
+
+.skills li {
+  display: inline-block;
+  background-color: #a9745b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #6d4c41;
+  border-top: 1px solid #e6d3c7;
+}
