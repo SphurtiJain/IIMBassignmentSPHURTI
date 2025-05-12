@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #3f292b; 
+  color: #ffffff; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200vh;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #593d3b; 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+
+.hero {
+  background: url('hero.jpg') no-repeat center center/cover;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffff;  
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.hero-text button {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #dbbea1; 
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+.collections {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.collections h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #dbbea1; 
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+
+.collection-item img {
+  filter: brightness(0.95);
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.collection-item img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.collection-item {
+  background-color:#dbbea1; 
+  border-radius: 12px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  color: #3f292b;  
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  
+}
+
+.collection-item span {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+
+.story {
+
+  padding: 5rem 2rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.story-brand {
+  background-color: dbbea1(255, 255, 255, 0.95);
+  padding: 8rem;
+  max-width: 900px;
+  color: #dbbea1; 
+  font-size: 10rem;
+}
+
+.story-text {
+  margin-top: 0.5rem;
+  background-color: dbbea1(255, 255, 255, 0.95);
+  padding: 11rem 2rem;
+  max-width: 300px;
+  color: #dbbea1; 
+  border-left: 3px solid #593d3b; 
+}
+
+.story-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.story-text p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.story-text button {
+  padding: 0.5rem 1.5rem;
+  background-color: #dbbea1; 
+  text-decoration: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button {
+  background-color: #34db7f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-link {
+  display: inline-block;
+  background-color: #dbbea1;
+  color: white;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-link .ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+
+.button-link.hover {
+  background-color: #34db7f;
+  transform: scale(1.05);
+}
+
+.button-link.hovered {
+  transform: scale(1.05);
+  background-color: #34db7f;
+}
+
+.contact-page {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #1d1d1f;
+}
+
+.contact-box {
+  background-color: #dbbea1;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.insta-icon {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #1d1d1f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.insta-icon:hover {
+  color: #e1306c; 
+}
+
+.insta-icon i {
+  margin-right: 8px;
+}
+
+.hero-text, .collection-item, .story-text, .contact-box {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .story {
+    justify-content: center;
+  }
+
+  .story-text {
+    max-width: 100%;
+  }
+}
